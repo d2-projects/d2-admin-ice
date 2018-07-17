@@ -1,0 +1,56 @@
+{
+  "name": "@d2-admin/ice-scaffold",
+  "version": "1.0.12",
+  "description": "一套优雅的后台模板，现已推出 ice 版本",
+  "author": "liyang <1711467488@qq.com>",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "vue-cli-service serve --open",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "test:unit": "vue-cli-service test:unit"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
+    "better-scroll": "^1.12.4",
+    "element-ui": "^2.4.3",
+    "js-cookie": "^2.2.0",
+    "lodash.uniqueid": "^4.0.1",
+    "lowdb": "^1.0.0",
+    "particles.js": "^2.0.0",
+    "screenfull": "^3.3.2",
+    "vue": "^2.5.16",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.0-beta.15",
+    "@vue/cli-plugin-eslint": "^3.0.0-beta.15",
+    "@vue/cli-plugin-unit-jest": "^3.0.0-beta.15",
+    "@vue/cli-service": "^3.0.0-beta.15",
+    "@vue/eslint-config-standard": "^3.0.0-rc.3",
+    "@vue/test-utils": "^1.0.0-beta.16",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^23.0.1",
+    "node-sass": "^4.9.2",
+    "sass-loader": "^7.0.3",
+    "vue-template-compiler": "^2.5.16"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "scaffoldConfig": {
+    "name": "D2Admin ice",
+    "title": "D2Admin ice 版本",
+    "screenshot": "http://fairyever.qiniudn.com/ice-scaffolds-screenshot@2x-34096236473612784912047.png"
+  },
+  "keywords": [
+    "dashboard",
+    "vue.js",
+    "d2-admin"
+  ],
+  "license": "MIT"
+}

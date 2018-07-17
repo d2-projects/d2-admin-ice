@@ -1,0 +1,50 @@
+{
+  "name": "vue-materials",
+  "type": "vue",
+  "blocks": [],
+  "layouts": [],
+  "scaffolds": [
+    {
+      "name": "D2Admin ice",
+      "title": "D2Admin ice 版本",
+      "source": {
+        "type": "npm",
+        "npm": "@d2-admin/ice-scaffold",
+        "version": "1.0.12"
+      },
+      "dependencies": {
+        "axios": "^0.18.0",
+        "babel-polyfill": "^6.26.0",
+        "better-scroll": "^1.12.4",
+        "element-ui": "^2.4.3",
+        "js-cookie": "^2.2.0",
+        "lodash.uniqueid": "^4.0.1",
+        "lowdb": "^1.0.0",
+        "particles.js": "^2.0.0",
+        "screenfull": "^3.3.2",
+        "vue": "^2.5.16",
+        "vue-router": "^3.0.1",
+        "vuex": "^3.0.1"
+      },
+      "devDependencies": {
+        "@vue/cli-plugin-babel": "^3.0.0-beta.15",
+        "@vue/cli-plugin-eslint": "^3.0.0-beta.15",
+        "@vue/cli-plugin-unit-jest": "^3.0.0-beta.15",
+        "@vue/cli-service": "^3.0.0-beta.15",
+        "@vue/eslint-config-standard": "^3.0.0-rc.3",
+        "@vue/test-utils": "^1.0.0-beta.16",
+        "babel-core": "7.0.0-bridge.0",
+        "babel-jest": "^23.0.1",
+        "node-sass": "^4.9.2",
+        "sass-loader": "^7.0.3",
+        "vue-template-compiler": "^2.5.16"
+      },
+      "screenshot": "http://fairyever.qiniudn.com/ice-scaffolds-screenshot@2x-34096236473612784912047.png",
+      "categories": [],
+      "features": {},
+      "description": "一套优雅的后台模板，现已推出 ice 版本",
+      "publishTime": "2018-07-09T11:29:28.870Z",
+      "updateTime": "2018-07-17T02:29:20.247Z"
+    }
+  ]
+}
