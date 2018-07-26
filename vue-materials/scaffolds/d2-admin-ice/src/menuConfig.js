@@ -21,6 +21,10 @@ const asideMenuConfig = [
       {
         name: '演示 1',
         path: '/demo1/'
+      },
+      {
+        name: '演示 2',
+        path: '/demo2/'
       }
     ]
   }
@@ -59,6 +63,10 @@ const headerMenuConfig = [
       {
         name: '演示 1',
         path: '/demo1/'
+      },
+      {
+        name: '演示 2',
+        path: '/demo2/'
       }
     ]
   }

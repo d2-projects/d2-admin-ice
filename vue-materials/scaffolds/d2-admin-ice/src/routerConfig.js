@@ -7,6 +7,7 @@ import Index from './pages/Index'
 import Login from './pages/Login'
 import Error404 from './pages/Error404'
 import Demo1 from './pages/Demo1'
+import Demo2 from './pages/Demo2'
 import HeaderAside from '@/layouts/HeaderAside'
 
 // 变量名 routerConfig 为 iceworks 检测关键字
@@ -26,11 +27,12 @@ const routerConfig = [
     layout: HeaderAside,
     component: Index
   },
+  // 如果不指定 name 字段，会根据 path 生成 name = page-demo1
+  // 转换规则见 UtilIce.recursiveRouterConfig 中 path2name 方法
+  // 如果不指定 meta 字段，会使用 UtilIce.recursiveRouterConfig 中默认设置
+  // 如果不指定 meta 字段，meta.title(标签页标题) 会取和上述 name 字段一样的值
+  // 下面两个页面就是对比 你可以分别观察两个页面上显示的路由数据差异
   {
-    // 如果不指定 name 字段，会根据 path 生成 name = page-demo1
-    // 转换规则见 UtilIce.recursiveRouterConfig 中 path2name 方法
-    // 如果不指定 meta 字段，会使用 UtilIce.recursiveRouterConfig 中默认设置
-    // 如果不指定 meta 字段，meta.title(标签页标题) 会取和上述 name 字段一样的值
     path: '/demo1',
     name: 'demo1', 
     layout: HeaderAside,
@@ -39,15 +41,18 @@ const routerConfig = [
       requiresAuth: true,
       title: '演示 1'
     }
+  },
+  {
+    path: '/demo2',
+    layout: HeaderAside,
+    component: Demo2
   }
 ]
 
-/**
- * 不参与菜单显示的
- * ice 不会处理这部分
- * 但是这部分路由也会被注册
- * 处理规则同 routerConfig
- */
+// 不参与菜单显示的
+// ice 不会处理这部分
+// 但是这部分路由也会被注册
+// 处理规则同 routerConfig
 const routerConfigMenuOut = [
   {
     path: '/login',
