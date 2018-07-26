@@ -520,12 +520,12 @@
   "layouts": [],
   "scaffolds": [
     {
-      "name": "D2Admin ice",
-      "title": "D2Admin ICE 1.0.24",
+      "name": "D2Admin ICE",
+      "title": "D2Admin ICE - 1.0.34",
       "source": {
         "type": "npm",
         "npm": "@d2-admin/ice-scaffold",
-        "version": "1.0.24"
+        "version": "1.0.34"
       },
       "dependencies": {
         "axios": "^0.17.1",
@@ -560,9 +560,9 @@
       "screenshot": "http://fairyever.qiniudn.com/ice-scaffolds-screenshot@2x-34096236473612784912047.png",
       "categories": [],
       "features": {},
-      "description": "一套优雅的后台模板，现已推出 ice 版本",
+      "description": "一套优雅的后台方案，现已推出 ice 版本",
       "publishTime": "2018-07-09T11:29:28.870Z",
-      "updateTime": "2018-07-25T15:59:09.965Z"
+      "updateTime": "2018-07-26T15:54:14.227Z"
     }
   ]
 }

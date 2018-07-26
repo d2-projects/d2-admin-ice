@@ -1,0 +1,75 @@
+<template>
+  <d2-container class="page-<%= name %>">
+    <!--
+      d2-container 组件参数
+      - 可选 type = full(默认) | card | ghost
+      - 可选 better-scroll 属性
+      - 可选 better-scroll-option 属性
+      - 文档 http://d2admin.fairyever.com/zh/components/container.html
+    -->
+    <template slot="header">Header</template>
+    <%_ blocks.forEach(function(block) { _%>
+    <<%= block.name %>/>
+    <%_ }); _%>
+    <template slot="footer">Footer</template>
+  </d2-container>
+</template>
+
+<script>
+// mixin
+import mixinPage from '@/mixins/page'
+// 组件
+<%_ blocks.forEach(function(block) { _%>
+import <%= block.className %> from '<%= block.path %>'
+<%_ }); _%>
+// 本页面
+export default {
+  name: '<%= name %>',
+  components: {
+    <%_ blocks.forEach(function(block, index) { _%>
+    <%= block.className %><%= index !== blocks.length - 1 ? ',' : '' %>
+    <%_ }); _%>
+  },
+  // 组合
+  mixins: [
+    'mixinPage'
+  ],
+  // 数据
+  data () {
+    return {}
+  },
+  // 计算属性
+  computed: {},
+  // 侦听器
+  watch: {},
+  // 生命周期钩子
+  beforeCreate () {},
+  created () {},
+  beforeMount () {},
+  mounted () {},
+  beforeUpdate () {},
+  updated () {},
+  activated () {},
+  deactivated () {},
+  beforeDestroy () {},
+  destroyed () {},
+  // 事件处理方法
+  methods: {}
+}
+</script>
+
+<style lang="scss" scoped>
+// 引入 public.scss 后可以访问全局变量和样式
+@import '~@/assets/style/public.scss';
+.page-<%= name %> {
+  // 这个页面的样式
+  // 如果页面不需要定义样式，请将 style 标签以及 d2-container 上的 class 删除
+  // 你可以像下面这样使用（BEM）：
+  // .page-<%= name %>--modifier {
+  //   background-color: #CCC;
+  // }
+  // .page-<%= name %>__element {
+  //   font-size: 14px;
+  // }
+}
+</style>
