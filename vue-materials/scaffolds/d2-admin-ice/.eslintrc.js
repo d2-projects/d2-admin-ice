@@ -5,14 +5,11 @@ module.exports = {
   },
   'extends': [
     'plugin:vue/essential',
-    '@vue/airbnb'
+    '@vue/standard'
   ],
-  "rules": {
-    "import/extensions": 0,
-    "no-mixed-operators": 0,
-    "max-len": 0,
-    "camelcase": 0,
-    "import/no-unresolved": 0
+  rules: {
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
   },
   parserOptions: {
     parser: 'babel-eslint'

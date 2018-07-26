@@ -11,18 +11,18 @@
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex';
+import { mapState, mapMutations } from 'vuex'
 
 export default {
   computed: {
     ...mapState({
-      isFullScreen: state => state.d2admin.isFullScreen,
-    }),
+      isFullScreen: state => state.d2admin.isFullScreen
+    })
   },
   methods: {
     ...mapMutations([
-      'd2adminFullScreenToggle',
-    ]),
-  },
-};
+      'd2adminFullScreenToggle'
+    ])
+  }
+}
 </script>

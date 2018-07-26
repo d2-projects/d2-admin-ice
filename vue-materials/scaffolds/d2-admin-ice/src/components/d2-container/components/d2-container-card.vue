@@ -16,6 +16,6 @@
 
 <script>
 export default {
-  name: 'd2-container-card',
-};
+  name: 'd2-container-card'
+}
 </script>

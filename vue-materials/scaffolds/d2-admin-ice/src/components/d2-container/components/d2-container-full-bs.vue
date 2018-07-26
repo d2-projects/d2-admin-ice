@@ -15,12 +15,12 @@
 </template>
 
 <script>
-import bs from './mixins/bs';
+import bs from './mixins/bs'
 
 export default {
   name: 'd2-container-card-bs',
   mixins: [
-    bs,
-  ],
-};
+    bs
+  ]
+}
 </script>

@@ -3,9 +3,9 @@
 // 打开一个url
 
 export default {
-  install(Vue) {
+  install (Vue) {
     Vue.prototype.$open = (url = 'https://github.com/d2-projects') => {
-      window.open(url);
-    };
-  },
-};
+      window.open(url)
+    }
+  }
+}

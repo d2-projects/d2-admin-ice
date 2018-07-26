@@ -1,23 +1,23 @@
-const util = {};
+const util = {}
 
 /**
  * @description 路由配置扁平化
  * @param {Array} config 层级路由设置
  */
-util.recursiveRouterConfig = function recursiveRouterConfig(config = []) {
-  const routerMap = [];
+util.recursiveRouterConfig = function recursiveRouterConfig (config = []) {
+  const routerMap = []
   /**
    * path -> name
    * @param {String} path path
    */
-  function path2name(path = '') {
-    return path.split('/').filter(e => e).join('-');
+  function path2name (path = '') {
+    return path.split('/').filter(e => e).join('-')
   }
   /**
    * recursive
    * @param {Array} con config
    */
-  function recursive(con) {
+  function recursive (con) {
     con.forEach((item) => {
       const route = item.layout ? {
         // -> 在主布局内的页面
@@ -35,9 +35,9 @@ util.recursiveRouterConfig = function recursiveRouterConfig(config = []) {
             // 如果没有设置 meta 自动用空对象
             meta: item.meta || {},
             // 页面组件
-            component: item.component,
-          },
-        ],
+            component: item.component
+          }
+        ]
       } : {
         // -> 不在主布局内的页面
         // 页面地址
@@ -47,43 +47,43 @@ util.recursiveRouterConfig = function recursiveRouterConfig(config = []) {
         // 如果没有设置 meta 自动用空对象
         meta: item.meta || {},
         // 页面组件
-        component: item.component,
-      };
-      if (Array.isArray(item.children)) {
-        recursive(item.children);
+        component: item.component
       }
-      routerMap.push(route);
-    });
-    return routerMap;
+      if (Array.isArray(item.children)) {
+        recursive(item.children)
+      }
+      routerMap.push(route)
+    })
+    return routerMap
   }
-  return recursive(config);
-};
+  return recursive(config)
+}
 
 /**
  * @description 转换菜单数据
  * @param {Array} arr menu config
  */
-util.recursiveMenuConfig = function recursiveMenuConfig(arr) {
-  const res = [];
+util.recursiveMenuConfig = function recursiveMenuConfig (arr) {
+  const res = []
   /**
    * 转换每个菜单对象上的 name 为 title
    * @param {Object} obj menu
    */
-  function convert(obj) {
+  function convert (obj) {
     const {
-      name, path, icon, children,
-    } = obj;
+      name, path, icon, children
+    } = obj
     return {
       title: name,
       icon,
       path,
-      ...children ? { children: children.map(convert) } : {},
-    };
+      ...children ? { children: children.map(convert) } : {}
+    }
   }
   arr.forEach((menu) => {
-    res.push(convert(menu));
-  });
-  return res;
-};
+    res.push(convert(menu))
+  })
+  return res
+}
 
-export default util;
+export default util

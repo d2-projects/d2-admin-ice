@@ -41,12 +41,12 @@
 
 <script>
 // 组件
-import d2ContainerFull from './components/d2-container-full.vue';
-import d2ContainerFullBs from './components/d2-container-full-bs.vue';
-import d2ContainerGhost from './components/d2-container-ghost.vue';
-import d2ContainerGhostBs from './components/d2-container-ghost-bs.vue';
-import d2ContainerCard from './components/d2-container-card.vue';
-import d2ContainerCardBs from './components/d2-container-card-bs.vue';
+import d2ContainerFull from './components/d2-container-full.vue'
+import d2ContainerFullBs from './components/d2-container-full-bs.vue'
+import d2ContainerGhost from './components/d2-container-ghost.vue'
+import d2ContainerGhostBs from './components/d2-container-ghost-bs.vue'
+import d2ContainerCard from './components/d2-container-card.vue'
+import d2ContainerCardBs from './components/d2-container-card-bs.vue'
 
 export default {
   name: 'd2-container',
@@ -56,21 +56,21 @@ export default {
     'd2-container-ghost': d2ContainerGhost,
     'd2-container-ghost-bs': d2ContainerGhostBs,
     'd2-container-card': d2ContainerCard,
-    'd2-container-card-bs': d2ContainerCardBs,
+    'd2-container-card-bs': d2ContainerCardBs
   },
   props: {
     // 容器样式
     type: {
       type: String,
       required: false,
-      default: 'full',
+      default: 'full'
     },
     // 滚动优化
     betterScroll: {
       type: Boolean,
       required: false,
-      default: false,
-    },
-  },
-};
+      default: false
+    }
+  }
+}
 </script>

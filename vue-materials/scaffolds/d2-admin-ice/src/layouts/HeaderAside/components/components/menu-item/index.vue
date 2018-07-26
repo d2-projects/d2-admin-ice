@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import uniqueid from 'lodash.uniqueid';
+import uniqueid from 'lodash.uniqueid'
 
 export default {
   name: 'd2-layout-header-aside-menu-item',
@@ -14,13 +14,13 @@ export default {
     menu: {
       type: Object,
       required: false,
-      default: () => {},
-    },
+      default: () => {}
+    }
   },
-  data() {
+  data () {
     return {
-      uniqueid: uniqueid('d2-menu-empty-'),
-    };
-  },
-};
+      uniqueid: uniqueid('d2-menu-empty-')
+    }
+  }
+}
 </script>

@@ -12,16 +12,16 @@
 </template>
 
 <script>
-import themeList from './components/d2-theme-list';
+import themeList from './components/d2-theme-list'
 
 export default {
   components: {
-    'd2-theme-list': themeList,
+    'd2-theme-list': themeList
   },
-  data() {
+  data () {
     return {
-      dialogVisible: false,
-    };
-  },
-};
+      dialogVisible: false
+    }
+  }
+}
 </script>

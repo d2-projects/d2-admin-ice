@@ -48,72 +48,72 @@
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex';
+import { mapState, mapMutations } from 'vuex'
 
 export default {
   computed: {
     ...mapState({
       pageOpenedList: state => state.d2admin.pageOpenedList,
-      pageCurrent: state => state.d2admin.pageCurrent,
-    }),
+      pageCurrent: state => state.d2admin.pageCurrent
+    })
   },
   methods: {
     ...mapMutations([
       'd2adminTagCloseLeft',
       'd2adminTagCloseRight',
       'd2adminTagCloseOther',
-      'd2adminTagCloseAll',
+      'd2adminTagCloseAll'
     ]),
     /**
      * @description 接收点击关闭控制上选项的事件
      */
-    handleControlItemClick(command) {
+    handleControlItemClick (command) {
       switch (command) {
         case 'left':
-          this.d2adminTagCloseLeft();
-          break;
+          this.d2adminTagCloseLeft()
+          break
         case 'right':
-          this.d2adminTagCloseRight();
-          break;
+          this.d2adminTagCloseRight()
+          break
         case 'other':
-          this.d2adminTagCloseOther();
-          break;
+          this.d2adminTagCloseOther()
+          break
         case 'all':
-          this.d2adminTagCloseAll(this);
-          break;
+          this.d2adminTagCloseAll(this)
+          break
         default:
-          this.$message.error('无效的操作');
-          break;
+          this.$message.error('无效的操作')
+          break
       }
     },
     /**
      * @description 接收点击关闭控制上按钮的事件
      */
-    handleControlBtnClick() {
-      this.d2adminTagCloseAll(this);
+    handleControlBtnClick () {
+      this.d2adminTagCloseAll(this)
     },
     /**
      * @description 接收点击 tab 标签的事件
      */
-    handleClick(tab) {
+    handleClick (tab) {
       // 找到点击的页面在 tag 列表里是哪个
-      const page = this.pageOpenedList.find(p => p.name === tab.name);
-      const { name, params, query } = page;
+      const page = this.pageOpenedList.find(p => p.name === tab.name)
+      const { name, params, query } = page
       if (page) {
-        this.$router.push({ name, params, query });
+        this.$router.push({ name, params, query })
       }
     },
     /**
      * @description 点击 tab 上的删除按钮触发这里 首页的删除按钮已经隐藏 因此这里不用判断是 index
      */
-    handleTabsEdit(tagName, action) {
+    handleTabsEdit (tagName, action) {
       if (action === 'remove') {
         this.$store.commit('d2adminTagClose', {
           tagName,
-          vm: this,
-        });
+          vm: this
+        })
       }
-    },
-  },
-};
+    }
+  }
+}
 </script>

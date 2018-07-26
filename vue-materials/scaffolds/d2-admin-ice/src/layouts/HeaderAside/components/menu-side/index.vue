@@ -19,77 +19,77 @@
 </template>
 
 <script>
-import BScroll from 'better-scroll';
-import { mapState } from 'vuex';
-import menuMixin from '../mixin/menu';
-import d2LayoutMainMenuItem from '../components/menu-item/index.vue';
-import d2LayoutMainMenuSub from '../components/menu-sub/index.vue';
+import BScroll from 'better-scroll'
+import { mapState } from 'vuex'
+import menuMixin from '../mixin/menu'
+import d2LayoutMainMenuItem from '../components/menu-item/index.vue'
+import d2LayoutMainMenuSub from '../components/menu-sub/index.vue'
 
 export default {
   name: 'd2-layout-header-aside-menu-side',
   mixins: [
-    menuMixin,
+    menuMixin
   ],
   components: {
     'd2-layout-header-aside-menu-item': d2LayoutMainMenuItem,
-    'd2-layout-header-aside-menu-sub': d2LayoutMainMenuSub,
+    'd2-layout-header-aside-menu-sub': d2LayoutMainMenuSub
   },
-  data() {
+  data () {
     return {
       active: '',
       asideHeight: 300,
-      BS: null,
-    };
+      BS: null
+    }
   },
   computed: {
     ...mapState({
       menuAside: state => state.d2admin.menuAside,
-      isMenuAsideCollapse: state => state.d2admin.isMenuAsideCollapse,
-    }),
+      isMenuAsideCollapse: state => state.d2admin.isMenuAsideCollapse
+    })
   },
   watch: {
     // 折叠和展开菜单的时候销毁 better scroll
-    isMenuAsideCollapse() {
-      this.scrollDestroy();
+    isMenuAsideCollapse () {
+      this.scrollDestroy()
       setTimeout(() => {
-        this.scrollInit();
-      }, 500);
+        this.scrollInit()
+      }, 500)
     },
     // 监听路由 控制侧边栏激活状态
     '$route.matched': {
-      handler(val) {
-        this.active = val[val.length - 1].path;
+      handler (val) {
+        this.active = val[val.length - 1].path
         this.$nextTick(() => {
           if (this.menuAside.length > 0) {
-            this.$refs.menu.activeIndex = this.active;
+            this.$refs.menu.activeIndex = this.active
           }
-        });
+        })
       },
-      immediate: true,
-    },
+      immediate: true
+    }
   },
-  mounted() {
-    this.scrollInit();
+  mounted () {
+    this.scrollInit()
   },
-  beforeDestroy() {
-    this.scrollDestroy();
+  beforeDestroy () {
+    this.scrollDestroy()
   },
   methods: {
-    scrollInit() {
+    scrollInit () {
       this.BS = new BScroll(this.$el, {
-        mouseWheel: true,
+        mouseWheel: true
         // 如果你愿意可以打开显示滚动条
         // scrollbar: {
         //   fade: true,
         //   interactive: false
         // }
-      });
+      })
     },
-    scrollDestroy() {
+    scrollDestroy () {
       if (this.BS) {
-        this.BS.destroy();
+        this.BS.destroy()
       }
-    },
-  },
-};
+    }
+  }
+}
 </script>

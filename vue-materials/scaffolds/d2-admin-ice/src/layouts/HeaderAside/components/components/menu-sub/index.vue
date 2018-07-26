@@ -12,26 +12,26 @@
 </template>
 
 <script>
-import uniqueid from 'lodash.uniqueid';
+import uniqueid from 'lodash.uniqueid'
 // 组件
-import d2LayoutMainMenuItem from '../menu-item';
+import d2LayoutMainMenuItem from '../menu-item'
 
 export default {
   name: 'd2-layout-header-aside-menu-sub',
   components: {
-    'd2-layout-header-aside-menu-item': d2LayoutMainMenuItem,
+    'd2-layout-header-aside-menu-item': d2LayoutMainMenuItem
   },
   props: {
     menu: {
       type: Object,
       required: false,
-      default: () => {},
-    },
+      default: () => {}
+    }
   },
-  data() {
+  data () {
     return {
-      uniqueid: uniqueid('d2-menu-empty-'),
-    };
-  },
-};
+      uniqueid: uniqueid('d2-menu-empty-')
+    }
+  }
+}
 </script>

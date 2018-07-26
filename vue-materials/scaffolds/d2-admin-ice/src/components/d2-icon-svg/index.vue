@@ -10,13 +10,13 @@ export default {
   props: {
     name: {
       type: String,
-      required: true,
-    },
+      required: true
+    }
   },
   computed: {
-    icon() {
-      return `#d2-${this.name}`;
-    },
-  },
-};
+    icon () {
+      return `#d2-${this.name}`
+    }
+  }
+}
 </script>

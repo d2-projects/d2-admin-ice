@@ -18,33 +18,33 @@
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex';
+import { mapState, mapMutations } from 'vuex'
 
 export default {
   name: 'd2-theme-list',
-  data() {
+  data () {
     return {
       table: {
         showHeader: false,
-        border: true,
-      },
-    };
+        border: true
+      }
+    }
   },
   computed: {
     ...mapState({
       themeList: state => state.d2admin.themeList,
-      themeActiveName: state => state.d2admin.themeActiveName,
-    }),
+      themeActiveName: state => state.d2admin.themeActiveName
+    })
   },
   methods: {
     ...mapMutations([
-      'd2adminThemeSet',
+      'd2adminThemeSet'
     ]),
-    handleSelectTheme(name) {
-      this.d2adminThemeSet(name);
-    },
-  },
-};
+    handleSelectTheme (name) {
+      this.d2adminThemeSet(name)
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

@@ -53,14 +53,14 @@
 </template>
 
 <script>
-import { mapState, mapGetters, mapMutations } from 'vuex';
-import menuSide from './components/menu-side';
-import menuHeader from './components/menu-header';
-import tabs from './components/tabs';
-import headerFullscreen from './components/header-fullscreen';
-import headerTheme from './components/header-theme';
-import headerUser from './components/header-user';
-import headerHelp from './components/header-help';
+import { mapState, mapGetters, mapMutations } from 'vuex'
+import menuSide from './components/menu-side'
+import menuHeader from './components/menu-header'
+import tabs from './components/tabs'
+import headerFullscreen from './components/header-fullscreen'
+import headerTheme from './components/header-theme'
+import headerUser from './components/header-user'
+import headerHelp from './components/header-help'
 
 export default {
   name: 'd2-layout-header-aside',
@@ -71,49 +71,49 @@ export default {
     'd2-header-fullscreen': headerFullscreen,
     'd2-header-theme': headerTheme,
     'd2-header-user': headerUser,
-    'd2-header-help': headerHelp,
+    'd2-header-help': headerHelp
   },
-  data() {
+  data () {
     return {
       // [侧边栏宽度] 正常状态
       asideWidth: '200px',
       // [侧边栏宽度] 折叠状态
-      asideWidthCollapse: '65px',
-    };
+      asideWidthCollapse: '65px'
+    }
   },
   computed: {
     ...mapState({
       isGrayMode: state => state.d2admin.isGrayMode,
       pageOpenedList: state => state.d2admin.pageOpenedList,
-      isMenuAsideCollapse: state => state.d2admin.isMenuAsideCollapse,
+      isMenuAsideCollapse: state => state.d2admin.isMenuAsideCollapse
     }),
     ...mapGetters([
       'd2adminThemeActiveSetting',
-      'd2adminKeepAliveInclude',
+      'd2adminKeepAliveInclude'
     ]),
     /**
      * @description 最外层容器的背景图片样式
      */
-    styleLayoutMainGroup() {
+    styleLayoutMainGroup () {
       return {
         ...this.d2adminThemeActiveSetting.backgroundImage ? {
-          backgroundImage: `url('${this.$baseUrl}${this.d2adminThemeActiveSetting.backgroundImage}')`,
-        } : {},
-      };
-    },
+          backgroundImage: `url('${this.$baseUrl}${this.d2adminThemeActiveSetting.backgroundImage}')`
+        } : {}
+      }
+    }
   },
   methods: {
     ...mapMutations([
-      'd2adminMenuAsideCollapseToggle',
+      'd2adminMenuAsideCollapseToggle'
     ]),
     /**
      * 接收点击切换侧边栏的按钮
      */
-    handleToggleAside() {
-      this.d2adminMenuAsideCollapseToggle();
-    },
-  },
-};
+    handleToggleAside () {
+      this.d2adminMenuAsideCollapseToggle()
+    }
+  }
+}
 </script>
 
 <style lang="scss">

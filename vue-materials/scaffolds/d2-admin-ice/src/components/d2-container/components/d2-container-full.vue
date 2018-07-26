@@ -14,6 +14,6 @@
 
 <script>
 export default {
-  name: 'd2-container-full',
-};
+  name: 'd2-container-full'
+}
 </script>

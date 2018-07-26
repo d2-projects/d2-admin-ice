@@ -1,3 +1,3 @@
-import PageWelcome from './PageWelcome';
+import PageWelcome from './PageWelcome'
 
-export default PageWelcome;
+export default PageWelcome

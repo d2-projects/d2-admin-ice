@@ -21,15 +21,15 @@ export default {
     title: {
       type: String,
       required: false,
-      default: 'Title',
+      default: 'Title'
     },
     subTitle: {
       type: String,
       required: false,
-      default: 'subTitle',
-    },
-  },
-};
+      default: 'subTitle'
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
