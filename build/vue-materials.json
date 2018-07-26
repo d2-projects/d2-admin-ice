@@ -367,6 +367,31 @@
       "updateTime": "2018-07-26T03:22:04.401Z"
     },
     {
+      "name": "code-highlight",
+      "title": "代码高亮显示 v0.0.2",
+      "source": {
+        "type": "npm",
+        "npm": "@d2-admin/ice-block-code-highlight",
+        "version": "0.0.2",
+        "sourceCodeDirectory": "src/"
+      },
+      "dependencies": {
+        "highlight.js": "^9.12.0",
+        "vue": "^2.5.16"
+      },
+      "screenshot": "http://fairyever.qiniudn.com/20180726182712.png",
+      "categories": [
+        "信息展示"
+      ],
+      "features": {
+        "useComponents": []
+      },
+      "description": "高亮显示代码段",
+      "repository": "https://github.com/alibaba/ice",
+      "publishTime": "2018-07-26T10:28:50.066Z",
+      "updateTime": "2018-07-26T10:51:37.557Z"
+    },
+    {
       "name": "count-up",
       "title": "数字渐变动画 v0.0.3",
       "source": {
@@ -415,6 +440,31 @@
       "repository": "git+https://github.com/d2-projects/d2-admin-ice.git",
       "publishTime": "2018-07-26T01:43:47.583Z",
       "updateTime": "2018-07-26T01:57:01.848Z"
+    },
+    {
+      "name": "json-tree-view",
+      "title": "树形 json 查看器 v0.0.3",
+      "source": {
+        "type": "npm",
+        "npm": "@d2-admin/ice-block-json-tree-view",
+        "version": "0.0.3",
+        "sourceCodeDirectory": "src/"
+      },
+      "dependencies": {
+        "vue": "^2.5.16",
+        "vue-json-tree-view": "^2.1.4"
+      },
+      "screenshot": "http://fairyever.qiniudn.com/20180726180840.gif",
+      "categories": [
+        "信息展示"
+      ],
+      "features": {
+        "useComponents": []
+      },
+      "description": "树形 json 查看器",
+      "repository": "https://github.com/alibaba/ice",
+      "publishTime": "2018-07-26T10:09:01.349Z",
+      "updateTime": "2018-07-26T10:52:00.501Z"
     },
     {
       "name": "markdown-view",

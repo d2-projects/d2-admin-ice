@@ -1,0 +1,32 @@
+{
+  "name": "@d2-admin/ice-block-code-highlight",
+  "version": "0.0.2",
+  "description": "高亮显示代码段",
+  "author": "liyang <1711467488@qq.com>",
+  "files": [
+    "src/",
+    "lib/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alibaba/ice"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ice",
+    "vue",
+    "block"
+  ],
+  "dependencies": {
+    "highlight.js": "^9.12.0",
+    "vue": "^2.5.16"
+  },
+  "blockConfig": {
+    "name": "code-highlight",
+    "title": "代码高亮显示 v0.0.2",
+    "categories": [
+      "信息展示"
+    ],
+    "screenshot": "http://fairyever.qiniudn.com/20180726182712.png"
+  }
+}
