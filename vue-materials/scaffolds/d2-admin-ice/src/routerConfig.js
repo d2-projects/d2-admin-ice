@@ -8,6 +8,7 @@ import Error404 from './pages/Error404'
 import PageWelcome from './pages/PageWelcome'
 import HeaderAside from '@/layouts/HeaderAside'
 
+// 默认公用 meta 设置
 const meta = {
   requiresAuth: true
 }
@@ -15,13 +16,11 @@ const meta = {
 // 变量名 routerConfig 为 iceworks 检测关键字
 // ice 会自动在这个变量下添加路由数据
 // 请不要修改名称
-
-// ice 自动添加的路由记录是以下格式，
-
+// 备注 ice 自动添加的路由记录是以下格式
 // {
 //   path: '/page4',
 //   layout: d2LayoutMain,
-//   component: 4,
+//   component: 4
 // }
 
 const routerConfig = [
@@ -32,17 +31,19 @@ const routerConfig = [
     component: Index
   },
   {
-    path: '/page/demo',
-    name: 'page-demo',
+    // 如果不指定 neme 字段，会根据 path 生成 name = page-demo
+    // 转换规则见 UtilIce.recursiveRouterConfig 中 path2name 方法
+    // 如果不指定 neme 字段，会使用 UtilIce.recursiveRouterConfig 中默认的 meta 设置
+    // 如果不指定 neme 字段，meta.title 会取和上述 name 字段一样的值
+    path: '/page/demo', 
     layout: HeaderAside,
-    component: PageWelcome,
-    meta: { ...meta, title: '空页面' }
+    component: PageWelcome
   }
 ]
 
 // 不参与菜单显示的
 // ice 不会处理这部分
-const menuOut = [
+const routerConfigMenuOut = [
   {
     path: '/login',
     name: 'login',
@@ -59,7 +60,7 @@ const menuOut = [
 // 这个数据会在 router.js 中被扁平处理
 export default UtilIce.recursiveRouterConfig([
   ...routerConfig,
-  ...menuOut
+  ...routerConfigMenuOut
 ])
 
 // 导出参与多标签页处理的路由设置

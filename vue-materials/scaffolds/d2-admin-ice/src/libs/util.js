@@ -116,7 +116,7 @@ util.checkUpdate = function checkUpdate (vm) {
  * @description 显示版本信息
  */
 util.showInfo = function showInfo () {
-  util.logCapsule('D2Admin', `v${version}`)
+  util.logCapsule('D2Admin ICE', `v${version}`)
   console.log('Github https://github.com/d2-projects/d2-admin')
   console.log('Doc    http://d2admin.fairyever.com/zh/')
 }

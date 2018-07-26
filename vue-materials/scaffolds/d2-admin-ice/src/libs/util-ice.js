@@ -1,11 +1,15 @@
-const util = {}
+const utilIce = {}
 
 /**
  * @description 路由配置扁平化
  * @param {Array} config 层级路由设置
  */
-util.recursiveRouterConfig = function recursiveRouterConfig (config = []) {
+utilIce.recursiveRouterConfig = function recursiveRouterConfig (config = []) {
   const routerMap = []
+  // 默认公用 meta 设置
+  const meta = {
+    requiresAuth: true
+  }
   /**
    * path -> name
    * @param {String} path path
@@ -33,7 +37,10 @@ util.recursiveRouterConfig = function recursiveRouterConfig (config = []) {
             // 如果路由没有设置 name 就用 path 处理成name
             name: item.name || path2name(item.path),
             // 如果没有设置 meta 自动用空对象
-            meta: item.meta || {},
+            meta: item.meta || {
+              ...meta,
+              title: path2name(item.path)
+            },
             // 页面组件
             component: item.component
           }
@@ -45,7 +52,10 @@ util.recursiveRouterConfig = function recursiveRouterConfig (config = []) {
         // 如果路由没有设置 name 就用 path 处理成name
         name: item.name || path2name(item.path),
         // 如果没有设置 meta 自动用空对象
-        meta: item.meta || {},
+        meta: item.meta || {
+          ...meta,
+          title: path2name(item.path)
+        },
         // 页面组件
         component: item.component
       }
@@ -63,7 +73,7 @@ util.recursiveRouterConfig = function recursiveRouterConfig (config = []) {
  * @description 转换菜单数据
  * @param {Array} arr menu config
  */
-util.recursiveMenuConfig = function recursiveMenuConfig (arr) {
+utilIce.recursiveMenuConfig = function recursiveMenuConfig (arr) {
   const res = []
   /**
    * 转换每个菜单对象上的 name 为 title
@@ -86,4 +96,4 @@ util.recursiveMenuConfig = function recursiveMenuConfig (arr) {
   return res
 }
 
-export default util
+export default utilIce
