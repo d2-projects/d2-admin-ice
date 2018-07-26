@@ -6,13 +6,11 @@ import screenfull from 'screenfull'
 import util from '@/libs/util.js'
 import db from '@/libs/db.js'
 import themeList from '@/assets/style/theme/list.js'
-import { version } from '../../../package'
 
 const pageOpenedDefult = {
   name: 'index',
   meta: {
-    title: '首页',
-    requiresAuth: false
+    title: '首页'
   }
 }
 
@@ -22,12 +20,6 @@ export default {
     userInfo: {
       name: ''
     },
-    // D2Admin 版本
-    version,
-    // 最新版本的信息
-    releasesLatest: {},
-    // 有新版本
-    releasesUpdate: false,
     // 顶栏菜单
     menuHeader: [],
     // 侧栏菜单
@@ -324,24 +316,6 @@ export default {
           name: '请重新登陆'
         }
       })
-    },
-    /**
-     * @description 设置是否有新的 D2Admin 版本
-     * @class releasesUpdate
-     * @param {vuex state} state vuex state
-     * @param {Boolean} releasesUpdate can update
-     */
-    d2adminReleasesUpdateSet (state, releasesUpdate) {
-      state.releasesUpdate = releasesUpdate
-    },
-    /**
-     * @description 设置最新版本的信息
-     * @class releasesLatest
-     * @param {vuex state} state vuex state
-     * @param {Object}} releases releases value
-     */
-    d2adminReleasesLatestSet (state, releases) {
-      state.releasesLatest = releases
     },
     /**
      * @class pagePool

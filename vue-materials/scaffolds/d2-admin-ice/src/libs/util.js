@@ -1,8 +1,6 @@
 /* eslint no-console: 0 */
 
 import Cookies from 'js-cookie'
-import axios from 'axios'
-import semver from 'semver'
 import UaParser from 'ua-parser-js'
 import { version } from '../../package.json'
 
@@ -86,30 +84,6 @@ util.logCapsule = function logCapsule (title, info) {
     'background:#3488ff; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff',
     'background:transparent'
   )
-}
-
-/**
- * @description 检查版本更新
- * @param {Object} vm vue
- */
-util.checkUpdate = function checkUpdate (vm) {
-  if (!process.env.VUE_APP_RELEASES_API) {
-    return
-  }
-  axios.get(process.env.VUE_APP_RELEASES_API)
-    .then((res) => {
-      const versionGet = res.tag_name
-      const update = semver.lt(version, versionGet)
-      if (update) {
-        util.logCapsule('D2Admin', `New version ${res.name}`)
-        console.log(`版本号: ${res.tag_name} | 详情${res.html_url}`)
-        vm.$store.commit('d2adminReleasesUpdateSet', true)
-      }
-      vm.$store.commit('d2adminReleasesLatestSet', res)
-    })
-    .catch((err) => {
-      console.log('checkUpdate error', err)
-    })
 }
 
 /**

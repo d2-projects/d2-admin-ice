@@ -23,7 +23,6 @@
     "mockjs": "^1.0.1-beta3",
     "particles.js": "^2.0.0",
     "screenfull": "^3.3.2",
-    "semver": "^5.5.0",
     "ua-parser-js": "^0.7.18",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1",

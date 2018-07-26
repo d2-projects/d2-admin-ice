@@ -5,7 +5,7 @@ import UtilIce from '@/libs/util-ice.js'
 import Index from './pages/Index'
 import Login from './pages/Login'
 import Error404 from './pages/Error404'
-import PageWelcome from './pages/PageWelcome'
+import PageDemo1 from './pages/PageDemo1'
 import HeaderAside from '@/layouts/HeaderAside'
 
 // 默认公用 meta 设置
@@ -31,13 +31,13 @@ const routerConfig = [
     component: Index
   },
   {
-    // 如果不指定 neme 字段，会根据 path 生成 name = page-demo
+    // 如果不指定 neme 字段，会根据 path 生成 name = page-demo1
     // 转换规则见 UtilIce.recursiveRouterConfig 中 path2name 方法
     // 如果不指定 neme 字段，会使用 UtilIce.recursiveRouterConfig 中默认的 meta 设置
     // 如果不指定 neme 字段，meta.title 会取和上述 name 字段一样的值
-    path: '/page/demo', 
+    path: '/page/demo1', 
     layout: HeaderAside,
-    component: PageWelcome
+    component: PageDemo1
   }
 ]
 
