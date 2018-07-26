@@ -1,0 +1,33 @@
+{
+  "name": "@d2-admin/ice-block-markdown-view",
+  "version": "0.0.3",
+  "description": "解析 markdown 内容并显示",
+  "author": "liyang <1711467488@qq.com>",
+  "files": [
+    "src/",
+    "lib/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d2-projects/d2-admin-ice.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ice",
+    "vue",
+    "block"
+  ],
+  "dependencies": {
+    "github-markdown-css": "^2.10.0",
+    "marked": "^0.4.0",
+    "vue": "^2.5.16"
+  },
+  "blockConfig": {
+    "name": "markdown-view",
+    "title": "Markdown 解析 v0.0.3",
+    "categories": [
+      "信息展示"
+    ],
+    "screenshot": "http://fairyever.qiniudn.com/20180726001427.png"
+  }
+}

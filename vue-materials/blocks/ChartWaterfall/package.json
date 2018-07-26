@@ -1,0 +1,33 @@
+{
+  "name": "@d2-admin/ice-block-chart-waterfall",
+  "version": "0.0.1",
+  "description": "瀑布图",
+  "author": "liyang <1711467488@qq.com>",
+  "files": [
+    "src/",
+    "lib/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alibaba/ice"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ice",
+    "vue",
+    "block"
+  ],
+  "dependencies": {
+    "echarts": "^4.1.0",
+    "v-charts": "^1.17.8",
+    "vue": "^2.5.16"
+  },
+  "blockConfig": {
+    "name": "chart-waterfall",
+    "title": "瀑布图 v0.0.1",
+    "categories": [
+      "图表"
+    ],
+    "screenshot": "http://fairyever.qiniudn.com/20180726131522.gif"
+  }
+}
