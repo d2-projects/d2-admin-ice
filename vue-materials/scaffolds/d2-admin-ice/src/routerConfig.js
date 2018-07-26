@@ -29,8 +29,8 @@ const routerConfig = [
   },
   // 如果不指定 name 字段，会根据 path 生成 name = page-demo1
   // 转换规则见 UtilIce.recursiveRouterConfig 中 path2name 方法
-  // 如果不指定 meta 字段，会使用 UtilIce.recursiveRouterConfig 中默认设置
-  // 如果不指定 meta 字段，meta.title(标签页标题) 会取和上述 name 字段一样的值
+  // meta 字段会和默认值使用 Object.assign 合并
+  // 如果不指定 meta.name 的话，name 字段会使用和上面路由 name 一样的取值逻辑
   // 下面两个页面就是对比 你可以分别观察两个页面上显示的路由数据差异
   {
     path: '/demo1',
@@ -57,7 +57,10 @@ const routerConfigMenuOut = [
   {
     path: '/login',
     name: 'login',
-    component: Login
+    component: Login,
+    meta: {
+      requiresAuth: false
+    }
   },
   {
     path: '*',

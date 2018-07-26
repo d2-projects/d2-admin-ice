@@ -19,7 +19,7 @@ util.cookies.set = function cookiesSet (name = 'default', value = '', setting = 
     expires: 1
   }
   Object.assign(cookieSetting, setting)
-  Cookies.set(`d2admin-${version}-${name}`, value, cookieSetting)
+  Cookies.set(`d2admin-ice-${version}-${name}`, value, cookieSetting)
 }
 
 /**
@@ -27,7 +27,7 @@ util.cookies.set = function cookiesSet (name = 'default', value = '', setting = 
  * @param {String} name cookie name
  */
 util.cookies.get = function cookiesGet (name = 'default') {
-  return Cookies.get(`d2admin-${version}-${name}`)
+  return Cookies.get(`d2admin-ice-${version}-${name}`)
 }
 
 /**
@@ -42,7 +42,7 @@ util.cookies.getAll = function cookiesGetAll () {
  * @param {String} name cookie name
  */
 util.cookies.remove = function cookiesRemove (name = 'default') {
-  return Cookies.remove(`d2admin-${version}-${name}`)
+  return Cookies.remove(`d2admin-ice-${version}-${name}`)
 }
 
 /**

@@ -32,11 +32,11 @@ utilIce.recursiveRouterConfig = function recursiveRouterConfig (config = []) {
             path: '',
             // 如果路由没有设置 name 就用 path 处理成name
             name: item.name || path2name(item.path),
-            // 如果没有设置 meta 自动用空对象
-            meta: item.meta || {
+            // meta 设置和默认值合并
+            meta: Object.assign({
               requiresAuth: true,
               title: path2name(item.path)
-            },
+            }, item.meta),
             // 页面组件
             component: item.component
           }
@@ -47,11 +47,11 @@ utilIce.recursiveRouterConfig = function recursiveRouterConfig (config = []) {
         path: item.path,
         // 如果路由没有设置 name 就用 path 处理成name
         name: item.name || path2name(item.path),
-        // 如果没有设置 meta 自动用空对象
-        meta: item.meta || {
+        // meta 设置和默认值合并
+        meta: Object.assign({
           requiresAuth: true,
           title: path2name(item.path)
-        },
+        }, item.meta),
         // 页面组件
         component: item.component
       }
