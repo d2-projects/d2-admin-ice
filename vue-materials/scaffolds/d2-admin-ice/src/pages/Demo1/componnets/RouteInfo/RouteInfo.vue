@@ -1,5 +1,8 @@
 <template>
-  <pre>{{route}}</pre>
+  <div>
+    <p class="d2-mt-0">本页面路由数据</p>
+    <pre>{{route}}</pre>
+  </div>
 </template>
 
 <script>

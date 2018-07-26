@@ -6,7 +6,7 @@ import UtilIce from '@/libs/util-ice.js'
 import Index from './pages/Index'
 import Login from './pages/Login'
 import Error404 from './pages/Error404'
-import PageDemo1 from './pages/PageDemo1'
+import Demo1 from './pages/Demo1'
 import HeaderAside from '@/layouts/HeaderAside'
 
 // 变量名 routerConfig 为 iceworks 检测关键字
@@ -31,13 +31,13 @@ const routerConfig = [
     // 转换规则见 UtilIce.recursiveRouterConfig 中 path2name 方法
     // 如果不指定 meta 字段，会使用 UtilIce.recursiveRouterConfig 中默认设置
     // 如果不指定 meta 字段，meta.title(标签页标题) 会取和上述 name 字段一样的值
-    path: '/page/demo1',
-    name: 'page-demo1', 
+    path: '/demo1',
+    name: 'demo1', 
     layout: HeaderAside,
-    component: PageDemo1,
+    component: Demo1,
     meta: {
       requiresAuth: true,
-      title: '演示页面 1'
+      title: '演示 1'
     }
   }
 ]

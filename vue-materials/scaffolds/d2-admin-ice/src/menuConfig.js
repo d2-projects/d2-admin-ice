@@ -8,18 +8,24 @@ import utilIce from './libs/util-ice'
 // ice 不会修改 headerMenuConfig
 const headerMenuConfig = [
   {
-    name: '演示菜单',
+    name: '空菜单',
     icon: 'flask',
     children: [
       {
-        name: '正在开发 1',
+        name: 'menu 1',
         children: [
-          { name: '正在开发 1-1' },
-          { name: '正在开发 1-2' }
+          {
+            name: 'menu 1-1',
+            children: [
+              { name: 'menu 1-1-1' },
+              { name: 'menu 1-1-2' }
+            ]
+          },
+          { name: 'menu 1-2' }
         ]
       },
-      { name: '正在开发 2' },
-      { name: '正在开发 3' }
+      { name: 'menu 2' },
+      { name: 'menu 3' }
     ]
   },
   {
@@ -27,8 +33,8 @@ const headerMenuConfig = [
     icon: 'folder-o',
     children: [
       {
-        name: '空页面',
-        path: '/page/demo1/'
+        name: '演示 1',
+        path: '/demo1/'
       }
     ]
   }
@@ -45,12 +51,12 @@ const headerMenuConfig = [
 
 const asideMenuConfig = [
   {
-    name: '空白页面',
+    name: '演示页面',
     icon: 'folder-o',
     children: [
       {
-        name: '空页面',
-        path: '/page/demo1/'
+        name: '演示 1',
+        path: '/demo1/'
       }
     ]
   }
