@@ -1,5 +1,5 @@
 <template>
-  <d2-container class="page-demo1">
+  <d2-container>
     <template slot="header">
       WELCOME
     </template>
@@ -21,12 +21,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-@import '~@/assets/style/public.scss';
-.page-demo1 {
-  .page-demo1_link {
-    color: $color-primary;
-  }
-}
-</style>
