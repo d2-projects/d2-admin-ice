@@ -6,10 +6,6 @@ const utilIce = {}
  */
 utilIce.recursiveRouterConfig = function recursiveRouterConfig (config = []) {
   const routerMap = []
-  // 默认公用 meta 设置
-  const meta = {
-    requiresAuth: true
-  }
   /**
    * path -> name
    * @param {String} path path
@@ -38,7 +34,7 @@ utilIce.recursiveRouterConfig = function recursiveRouterConfig (config = []) {
             name: item.name || path2name(item.path),
             // 如果没有设置 meta 自动用空对象
             meta: item.meta || {
-              ...meta,
+              requiresAuth: true,
               title: path2name(item.path)
             },
             // 页面组件
@@ -53,7 +49,7 @@ utilIce.recursiveRouterConfig = function recursiveRouterConfig (config = []) {
         name: item.name || path2name(item.path),
         // 如果没有设置 meta 自动用空对象
         meta: item.meta || {
-          ...meta,
+          requiresAuth: true,
           title: path2name(item.path)
         },
         // 页面组件

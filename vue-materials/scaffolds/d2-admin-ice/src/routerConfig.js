@@ -1,5 +1,6 @@
 /* eslint-disable */
 
+// 工具
 import UtilIce from '@/libs/util-ice.js'
 // 页面和布局
 import Index from './pages/Index'
@@ -7,11 +8,6 @@ import Login from './pages/Login'
 import Error404 from './pages/Error404'
 import PageDemo1 from './pages/PageDemo1'
 import HeaderAside from '@/layouts/HeaderAside'
-
-// 默认公用 meta 设置
-const meta = {
-  requiresAuth: true
-}
 
 // 变量名 routerConfig 为 iceworks 检测关键字
 // ice 会自动在这个变量下添加路由数据
@@ -31,25 +27,33 @@ const routerConfig = [
     component: Index
   },
   {
-    // 如果不指定 neme 字段，会根据 path 生成 name = page-demo1
+    // 如果不指定 name 字段，会根据 path 生成 name = page-demo1
     // 转换规则见 UtilIce.recursiveRouterConfig 中 path2name 方法
-    // 如果不指定 neme 字段，会使用 UtilIce.recursiveRouterConfig 中默认的 meta 设置
-    // 如果不指定 neme 字段，meta.title 会取和上述 name 字段一样的值
-    path: '/page/demo1', 
+    // 如果不指定 meta 字段，会使用 UtilIce.recursiveRouterConfig 中默认设置
+    // 如果不指定 meta 字段，meta.title(标签页标题) 会取和上述 name 字段一样的值
+    path: '/page/demo1',
+    name: 'page-demo1', 
     layout: HeaderAside,
-    component: PageDemo1
+    component: PageDemo1,
+    meta: {
+      requiresAuth: true,
+      title: '演示页面 1'
+    }
   }
 ]
 
-// 不参与菜单显示的
-// ice 不会处理这部分
+/**
+ * 不参与菜单显示的
+ * ice 不会处理这部分
+ * 但是这部分路由也会被注册
+ * 处理规则同 routerConfig
+ */
 const routerConfigMenuOut = [
   {
     path: '/login',
     name: 'login',
     component: Login
   },
-  // path: '*' 一定要在最后面
   {
     path: '*',
     component: Error404

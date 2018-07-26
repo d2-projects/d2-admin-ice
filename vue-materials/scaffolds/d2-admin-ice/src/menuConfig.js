@@ -50,7 +50,7 @@ const asideMenuConfig = [
     children: [
       {
         name: '空页面',
-        path: '/page/demo/'
+        path: '/page/demo1/'
       }
     ]
   }
