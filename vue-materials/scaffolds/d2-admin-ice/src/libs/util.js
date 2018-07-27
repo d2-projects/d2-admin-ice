@@ -2,7 +2,9 @@
 
 import Cookies from 'js-cookie'
 import UaParser from 'ua-parser-js'
-import { version } from '../../package.json'
+
+// D2Admin 版本
+const version = process.env.VUE_APP_ICE_VERSION
 
 const util = {
   cookies: {}

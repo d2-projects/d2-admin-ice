@@ -1,6 +1,8 @@
 import low from 'lowdb'
 import LocalStorage from 'lowdb/adapters/LocalStorage'
-import { version } from '../../package'
+
+// D2Admin 版本
+const version = process.env.VUE_APP_ICE_VERSION
 
 const adapter = new LocalStorage(`d2admin-ice-${version}`)
 const db = low(adapter)

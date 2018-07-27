@@ -10,7 +10,7 @@ const baseUrl = '/'
 
 module.exports = {
   baseUrl, // 根据你的实际情况更改这里
-  lintOnSave: true,
+  // lintOnSave: true,
   devServer: {
     publicPath: baseUrl // 和 baseUrl 保持一致
   },

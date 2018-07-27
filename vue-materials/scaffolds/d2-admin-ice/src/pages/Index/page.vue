@@ -1,8 +1,8 @@
 <template>
   <d2-container>
     <d2-page-cover
-      title="I AM D2ADMIN"
-      sub-title="追求简约美感的后台管理系统集成方案">
+      title="I AM D2ADMIN ICE"
+      sub-title="一套优雅的后台方案 现已推出 ice 版本">
       <d2-icon-svg style="width: 120px;" name="d2admin"/>
       <div slot="footer" class="index-btn-group">
         <span @click="$open('https://github.com/d2-projects/d2-admin')">主页</span> |

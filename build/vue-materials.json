@@ -6,11 +6,11 @@
   "scaffolds": [
     {
       "name": "D2Admin ICE",
-      "title": "D2Admin ICE - 1.0.34",
+      "title": "D2Admin ICE",
       "source": {
         "type": "npm",
         "npm": "@d2-admin/ice-scaffold",
-        "version": "1.0.34"
+        "version": "1.1.6"
       },
       "dependencies": {
         "axios": "^0.17.1",
@@ -47,7 +47,7 @@
       "features": {},
       "description": "一套优雅的后台方案，现已推出 ice 版本",
       "publishTime": "2018-07-09T11:29:28.870Z",
-      "updateTime": "2018-07-26T15:54:14.227Z"
+      "updateTime": "2018-07-27T07:55:24.698Z"
     }
   ]
 }
