@@ -16,9 +16,7 @@ import mixinPage from '@/mixins/page'
 <%_ blocks.forEach(function(block) { _%>
 import <%= block.className %> from '<%= block.path %>'
 <%_ }); _%>
-// 本页面 请删除你不需要的预置代码
-// 由于 iceworks 组件代码风格和 D2Admin 不一致，ESLint 会报错误提示
-// 如果介意的话可以运行 npm run lint 自动修复
+// 请删除下面代码中你不需要的部分
 export default {
   name: '<%= name %>',
   components: {

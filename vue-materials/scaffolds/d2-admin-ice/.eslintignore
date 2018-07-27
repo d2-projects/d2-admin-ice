@@ -9,3 +9,6 @@ coverage/
 # 忽略文件
 **/*-min.js
 **/*.min.js
+
+# 忽略自动生成的文件夹
+src/pages/

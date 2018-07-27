@@ -7,6 +7,7 @@ function resolve (dir) {
 
 // 基础路径 注意发布之前要先修改这里
 const baseUrl = '/'
+// const baseUrl = '/d2-admin-ice-preview/'
 
 module.exports = {
   baseUrl, // 根据你的实际情况更改这里
