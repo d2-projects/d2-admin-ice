@@ -9,7 +9,7 @@
 * 菜单和路由逻辑
 * ...
 
-[中文文档](http://d2admin.fairyever.com/zh/)
+[中文文档](http://app.d3collection.cn/d2-admin-doc/lastest/zh/)
 
 **完整版**
 
