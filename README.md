@@ -1,5 +1,10 @@
 # D2Admin ICE
 
+<p align="center">
+  <a><img src="https://badge.fury.io/js/%40d2-admin%2Fice-scaffold.svg"/></a>
+  <a href="https://www.travis-ci.org/d2-projects/d2-admin-ice"><img src="https://www.travis-ci.org/d2-projects/d2-admin-ice.svg?branch=master"/></a>
+</p>
+
 安装
 
 ```
