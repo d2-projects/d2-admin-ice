@@ -16,7 +16,7 @@ script:
 
 deploy:
   provider: pages
-  local-dir: dist
+  local-dir: vue-materials/scaffolds/d2-admin-ice/dist
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
   keep-history: true
