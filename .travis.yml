@@ -9,7 +9,7 @@ branches:
   - master
 
 before_install:
-  - "vue-materials/scaffolds/d2-admin-ice/"
+  - "cd vue-materials/scaffolds/d2-admin-ice/"
 
 script:
   - npm run build
