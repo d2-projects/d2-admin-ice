@@ -15,7 +15,7 @@ export default {
     versionShow (state) {
       util.log.capsule('D2Admin ICE', `v${state.version}`)
       console.log('Github https://github.com/d2-projects/d2-admin')
-      console.log('Doc    http://app.d3collection.cn/d2-admin-doc/lastest/zh/')
+      console.log('Doc    https://d2-projects.github.io/d2-admin-doc/zh/')
     }
   }
 }
