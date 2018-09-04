@@ -3,7 +3,7 @@
   "version": "1.2.7",
   "description": "该模板默认支持多页模式，内置登陆验证、数据持久化、主题系统、字体图标库、多模式页面组件以及常用操作的封装等。",
   "author": "liyang <1711467488@qq.com>",
-  "homepage": "https://fairyever.gitee.io/d2-admin-ice-preview/",
+  "homepage": "https://d2-projects.github.io/d2-admin-ice",
   "main": "src/main.js",
   "scripts": {
     "serve": "vue-cli-service serve --open",
