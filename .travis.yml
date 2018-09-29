@@ -12,7 +12,7 @@ before_install:
   - "cd vue-materials/scaffolds/d2-admin-ice/"
 
 script:
-  - npm run build
+  - npm run build:travis
 
 deploy:
   provider: pages
