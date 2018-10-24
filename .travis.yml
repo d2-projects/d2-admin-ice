@@ -13,7 +13,7 @@ script:
   - npm run build:travis  
 
 before_install:
-  - "cd vue-materials/scaffolds/d2-admin-ice/"
+  - cd vue-materials/scaffolds/d2-admin-ice/
   - ./qshell account $AK $SK
   - curl -o- -L https://yarnpkg.com/install.sh | bash
   - export PATH=$HOME/.yarn/bin:$PATH
