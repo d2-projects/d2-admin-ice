@@ -1,10 +1,10 @@
-const utilIce = {}
+const util = {}
 
 /**
  * @description 路由配置扁平化
  * @param {Array} config 层级路由设置
  */
-utilIce.recursiveRouterConfig = function recursiveRouterConfig (config = []) {
+util.recursiveRouterConfig = function recursiveRouterConfig (config = []) {
   const routerMap = []
   /**
    * path -> name
@@ -69,7 +69,7 @@ utilIce.recursiveRouterConfig = function recursiveRouterConfig (config = []) {
  * @description 转换菜单数据
  * @param {Array} arr menu config
  */
-utilIce.recursiveMenuConfig = function recursiveMenuConfig (arr) {
+util.recursiveMenuConfig = function recursiveMenuConfig (arr) {
   const res = []
   /**
    * 转换每个菜单对象上的 name 为 title
@@ -92,4 +92,4 @@ utilIce.recursiveMenuConfig = function recursiveMenuConfig (arr) {
   return res
 }
 
-export default utilIce
+export default util
