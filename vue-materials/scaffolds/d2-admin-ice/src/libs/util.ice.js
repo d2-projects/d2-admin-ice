@@ -34,7 +34,7 @@ util.recursiveRouterConfig = function recursiveRouterConfig (config = []) {
             name: item.name || path2name(item.path),
             // meta 设置和默认值合并
             meta: Object.assign({
-              requiresAuth: true,
+              auth: true,
               title: path2name(item.path)
             }, item.meta),
             // 页面组件
@@ -49,7 +49,7 @@ util.recursiveRouterConfig = function recursiveRouterConfig (config = []) {
         name: item.name || path2name(item.path),
         // meta 设置和默认值合并
         meta: Object.assign({
-          requiresAuth: true,
+          auth: true,
           title: path2name(item.path)
         }, item.meta),
         // 页面组件
